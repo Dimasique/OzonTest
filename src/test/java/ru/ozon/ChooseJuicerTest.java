@@ -13,25 +13,46 @@ public class ChooseJuicerTest {
     private WebDriverWait waiting;
 
     private final By CATALOG = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/div[2]/div/div[1]/button/div");
-    private final By KITCHEN = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/div[2]/div/div[2]/div/div[1]/div/a[11]");
-    private final By KITCHEN_CHECK = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div/div[1]/aside/div[2]/a");
+    private final By KITCHEN = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/" +
+            "div[2]/div/div[2]/div/div[1]/div/a[11]");
+
+    private final By KITCHEN_STUFF = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div/div[1]/aside/div[2]/a");
     private final By SHOW_MORE = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div/div[1]/aside/div[2]/span");
     private final By JUICERS = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div/div[1]/aside/div[2]/div[6]/a");
-    private final By PRICE_INPUT_MIN = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/div[1]/div/aside/div[2]/div[2]/div[2]/div[1]/input");
-    private final By PRICE_INPUT_MAX = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/div[1]/div/aside/div[2]/div[2]/div[2]/div[2]/input");
-    private final By CHECK_INTERVAL = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[2]/div/div/button/div/span");
-    private final By CHECK_TITLE = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[1]/div/div[2]/h1");
-    private final By SORT_BY_BUTTON = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div/div/div[1]/div/div/input");
-    private final By ADD_JUICER = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/div[2]/div[3]/div[1]/div/div/div[1]/div/div/div[3]/div[3]/div/div/button/div");
-    private final By ONE_MORE = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/div[4]/div[1]/div[1]/div/div[2]/div[3]/div[4]/div/div[1]/div/div[1]/div/div/input");
-    private final By CHECK_BASKET = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/div[4]/a[2]");
-    private final By IS_IN_BASKET = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/div[3]/div/div/div/div/div[1]");
-    private final By CHECK_AMOUNT = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/div[4]/div[1]/div[1]/div/div[2]/div[3]/div[4]/div/div[1]/div/div[1]/div/div/div");
-    private final By PRICE_JUICER = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/div[4]/div[1]/div[1]/div/div[2]/div[3]/div[3]/div[1]/div/span");
-    private final By PRICE_IN_BUCKET =
-            By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/div[4]/div[2]/div/section/div[2]/div[4]/span[2]");
+    private final By PRICE_MIN = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/" +
+            "div[2]/div[1]/div/aside/div[2]/div[2]/div[2]/div[1]/input");
 
-    private final By POWER = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/div[1]/div/aside/div[8]/div[2]/div[2]/div[1]/input");
+    private final By PRICE_MAX = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/" +
+            "div[1]/div/aside/div[2]/div[2]/div[2]/div[2]/input");
+
+    private final By CHECK_PRICE_SEGMENT = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/" +
+            "div[2]/div[2]/div[2]/div[2]/div/div/button/div/span");
+
+    private final By CHECK_TITLE = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[1]/div/div[2]/h1");
+    private final By SORT_BY_BUTTON = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/" +
+            "div[2]/div[2]/div[2]/div[1]/div/div/div[1]/div/div/input");
+
+    private final By ADD_JUICER = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[2]/div[2]/div[3]/div[1]/" +
+                    "div/div/div[1]/div/div/div[3]/div[3]/div/div/button/div");
+
+    private final By ADD_ONE = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/div[4]/div[1]/div[1]/div/" +
+                    "div[2]/div[3]/div[4]/div/div[1]/div/div[1]/div/div/input");
+
+    private final By CHECK_BASKET = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/div[4]/a[2]");
+    private final By IS_IN_BASKET = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/" +
+            "div/div[3]/div[3]/div/div/div/div/div[1]");
+
+    private final By CHECK_AMOUNT = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/" +
+                    "div[4]/div[1]/div[1]/div/div[2]/div[3]/div[4]/div/div[1]/div/div[1]/div/div/div");
+
+    private final By PRICE_JUICER = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/" +
+                    "div[4]/div[1]/div[1]/div/div[2]/div[3]/div[3]/div[1]/div/span");
+
+    private final By PRICE_IN_BUCKET = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div/div/div[3]/" +
+            "div[4]/div[2]/div/section/div[2]/div[4]/span[2]");
+
+    private final By POWER = By.xpath("//*[@id=\"__ozon\"]/div/" +
+            "div[1]/div[3]/div[2]/div[1]/div/aside/div[8]/div[2]/div[2]/div[1]/input");
 
     public ChooseJuicerTest() {
         System.setProperty("webdriver.chrome.driver","C:\\Applications\\Chromium\\chromedriver.exe");
@@ -48,7 +69,7 @@ public class ChooseJuicerTest {
         waiting.until(ExpectedConditions.presenceOfElementLocated(KITCHEN));
         driver.findElement(KITCHEN).click();
 
-        waiting.until(ExpectedConditions.presenceOfElementLocated(KITCHEN_CHECK));
+        waiting.until(ExpectedConditions.presenceOfElementLocated(KITCHEN_STUFF));
         driver.findElement(SHOW_MORE).click();
 
         waiting.until(ExpectedConditions.presenceOfElementLocated(JUICERS));
@@ -56,15 +77,15 @@ public class ChooseJuicerTest {
     }
 
     public void setPrice(String low, String high) {
-        waiting.until(ExpectedConditions.presenceOfElementLocated(PRICE_INPUT_MIN));
-        driver.findElement(PRICE_INPUT_MIN).sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
-        driver.findElement(PRICE_INPUT_MIN).sendKeys(low);
-        driver.findElement(PRICE_INPUT_MIN).sendKeys(Keys.ENTER);
+        waiting.until(ExpectedConditions.presenceOfElementLocated(PRICE_MIN));
+        driver.findElement(PRICE_MIN).sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
+        driver.findElement(PRICE_MIN).sendKeys(low);
+        driver.findElement(PRICE_MIN).sendKeys(Keys.ENTER);
         sleep(2000);
 
-        driver.findElement(PRICE_INPUT_MAX).sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
-        driver.findElement(PRICE_INPUT_MAX).sendKeys(high);
-        driver.findElement(PRICE_INPUT_MAX).sendKeys(Keys.ENTER);
+        driver.findElement(PRICE_MAX).sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
+        driver.findElement(PRICE_MAX).sendKeys(high);
+        driver.findElement(PRICE_MAX).sendKeys(Keys.ENTER);
         sleep(2000);
     }
 
@@ -76,9 +97,9 @@ public class ChooseJuicerTest {
     }
 
     public void testFilter(String text1, String text2) {
-        waiting.until(ExpectedConditions.presenceOfElementLocated(CHECK_INTERVAL));
+        waiting.until(ExpectedConditions.presenceOfElementLocated(CHECK_PRICE_SEGMENT));
 
-        assert text1.equals(driver.findElement(CHECK_INTERVAL).getText())
+        assert text1.equals(driver.findElement(CHECK_PRICE_SEGMENT).getText())
                 && text2.equals(driver.findElement(CHECK_TITLE).getText());
     }
 
@@ -88,7 +109,7 @@ public class ChooseJuicerTest {
         driver.findElement(SORT_BY_BUTTON).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         sleep(2000);
         driver.findElement(ADD_JUICER).click();
-        sleep(300);
+        sleep(1000);
 
         driver.findElement(CHECK_BASKET).click();
         waiting.until(ExpectedConditions.presenceOfElementLocated(IS_IN_BASKET));
@@ -103,9 +124,9 @@ public class ChooseJuicerTest {
 
     public String addAndReturnAmount(int need) {
         for (int i = 1; i < need; i++) {
-            driver.findElement(ONE_MORE).sendKeys(Keys.ARROW_DOWN);
+            driver.findElement(ADD_ONE).sendKeys(Keys.ARROW_DOWN);
         }
-        driver.findElement(ONE_MORE).sendKeys(Keys.ENTER);
+        driver.findElement(ADD_ONE).sendKeys(Keys.ENTER);
         return driver.findElement(CHECK_AMOUNT).getText();
     }
 

@@ -24,7 +24,7 @@ public class Testes {
 
         TestChangeCity tester = new TestChangeCity();
         tester.changeCity(cityName);
-        assert "Вольск".equals(tester.getCityText());
+        assert cityName.equals(tester.getCityText());
 
         TestLogin testerLogin = new TestLogin(tester.getWebDriver(), tester.getWebDriverWait());
         testerLogin.openFormToInputPhone();

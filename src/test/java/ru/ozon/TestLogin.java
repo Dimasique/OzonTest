@@ -16,8 +16,8 @@ public class TestLogin {
     private By BUTTON_LOGIN = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/div[4]/div[1]/a/span[2]");
     private By INPUT_PHONE = By.xpath("/html/body/div[3]/div/div/div/div/div/div/div/div/div[2]/label/div/input");
     private By GET_CODE = By.xpath("/html/body/div[3]/div/div/div/div/div/div/div/div/div[3]/button");
-    private By BUCKET = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/div[4]/div[2]/a");
-    private By A = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div/div[2]/a");
+    private By ORDERS = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/header/div[1]/div[4]/div[2]/a");
+    private By HREF = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div/div[2]/a");
 
     public TestLogin() {
         System.setProperty("webdriver.chrome.driver","C:\\Applications\\Chromium\\chromedriver.exe");
@@ -34,11 +34,11 @@ public class TestLogin {
     }
 
     public void openFormToInputPhone() {
-        waiting.until(ExpectedConditions.presenceOfElementLocated(BUCKET));
-        driver.findElement(BUCKET).click();
+        waiting.until(ExpectedConditions.presenceOfElementLocated(ORDERS));
+        driver.findElement(ORDERS).click();
 
-        waiting.until(ExpectedConditions.presenceOfElementLocated(A));
-        driver.findElement(A).click();
+        waiting.until(ExpectedConditions.presenceOfElementLocated(HREF));
+        driver.findElement(HREF).click();
     }
 
     public void inputPhone(String phone) {

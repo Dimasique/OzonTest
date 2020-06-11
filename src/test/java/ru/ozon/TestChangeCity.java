@@ -17,9 +17,12 @@ public class TestChangeCity {
     private final By INPUT_CITY = By.xpath("//*[@id=\"__ozon\"]/div/div[2]/div/div/div/div/div/label/div/input");
     private final By CITY_NAME = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[1]/div/button/span");
 
-    private final By MAIN_PAGE = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[4]/div/div[1]/div[3]/section[1]/ul/li[1]/a");
-    private final By OPEN_MAP = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[4]/div/div[2]/div[5]/div[2]/div/div[2]/div[1]/a/div/div");
-    private final By ADDRESS = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[3]/div/div[2]/div[2]/div/div[2]/div/span/span");
+    private final By MAIN_PAGE = By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[4]/div/" +
+            "div[1]/div[3]/section[1]/ul/li[1]/a");
+    private final By OPEN_MAP =
+            By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[4]/div/div[2]/div[5]/div[2]/div/div[2]/div[1]/a/div/div");
+    private final By ADDRESS =
+            By.xpath("//*[@id=\"__ozon\"]/div/div[1]/div[3]/div[3]/div/div[2]/div[2]/div/div[2]/div/span/span");
 
     public TestChangeCity() {
         System.setProperty("webdriver.chrome.driver","C:\\Applications\\Chromium\\chromedriver.exe");
