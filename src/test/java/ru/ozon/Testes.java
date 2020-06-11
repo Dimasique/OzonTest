@@ -13,7 +13,7 @@ public class Testes {
         String result = tester.getTextAfterLogin();
 
         assert "Кабинет".equals(result);
-        tester.close();
+        //tester.close();
     }
 
 
@@ -33,7 +33,7 @@ public class Testes {
         assert "Кабинет".equals(result);
 
         assert cityName.equals(tester.openMapAndCheck());
-        tester.close();
+        //tester.close();
     }
 
     @Test
@@ -53,7 +53,7 @@ public class Testes {
         assert amount.equals(String.valueOf(need)) &&
                 need * price == totalPrice;
 
-        tester.close();
+        //tester.close();
     }
 
     @Test
@@ -73,7 +73,7 @@ public class Testes {
 
         assert amount.equals(String.valueOf(need)) &&
                 need * price == totalPrice;
-        tester.close();
+        //tester.close();
     }
 
 }

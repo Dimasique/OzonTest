@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ozon-test" target="11" />
+      <module name="ozon-test" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

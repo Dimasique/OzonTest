@@ -77,7 +77,7 @@ public class TestChangeCity {
             e.printStackTrace();
         }
         String text = driverNew.findElement(ADDRESS).getText();
-        driverNew.quit();
+        //driverNew.quit();
         return text;
     }
 
